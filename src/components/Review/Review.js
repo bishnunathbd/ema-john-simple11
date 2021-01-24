@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import fakeData from '../../fakeData';
 import { getDatabaseCart } from '../../utilities/databaseManager';
+import ReviewItem from '../ReviewItem/ReviewItem';
 
 const Review = () => {
   const [cart, setCart] = useState([]);
@@ -19,6 +20,9 @@ const Review = () => {
   return (
     <div>
       <h2>Cart Items: {cart.length}</h2>
+      {
+        cart.map(pd => <ReviewItem product={pd} key={pd.key}></ReviewItem>)
+      }
     </div>
   );
 };
