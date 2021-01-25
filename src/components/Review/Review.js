@@ -32,7 +32,9 @@ const Review = () => {
         }
       </div>
       <div className='cart-container'>
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart}>
+          <button className='shop-btn'>Place Order</button>
+        </Cart>
       </div>
     </div>
   );
